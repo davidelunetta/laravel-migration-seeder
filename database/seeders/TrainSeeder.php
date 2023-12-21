@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 use App\Models\Train;
 use Faker\Factory as Faker;
 class TrainSeeder extends Seeder
@@ -28,7 +29,7 @@ class TrainSeeder extends Seeder
                 'Numero_Carrozze' => $faker->numberBetween($min = 1, $max = 15),
                 'In_orario' => $faker->boolean,
                 'Cancellato' => $faker->boolean,
-                'Data_di_partenza' => $faker->date($format = 'Y-m-d', $max = 'now'),
+                'Data_di_partenza' => Carbon::now(),
                 'stato' => $faker->boolean,
             ]);
     }
