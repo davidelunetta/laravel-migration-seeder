@@ -29,7 +29,7 @@ class TrainSeeder extends Seeder
                 'Numero_Carrozze' => $faker->numberBetween($min = 1, $max = 15),
                 'In_orario' => $faker->boolean,
                 'Cancellato' => $faker->boolean,
-                'Data_di_partenza' => Carbon::now(),
+                'Data_di_partenza' => $faker->date,
                 'stato' => $faker->boolean,
             ]);
     }

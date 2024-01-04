@@ -11,10 +11,15 @@ class TrainController extends Controller
     public function index()
 {
     $currentDate = Carbon::now()->toDateString(); // Ottieni la data odierna
-
+    $allTrains = Train::all();
     $trains = Train::whereDate('Data_di_partenza', $currentDate)->get();
     // dd($trains);
-    return view('home', ['trains' => $trains]);
+    return view('home', ['trains' => $trains, 'allTrains' => $allTrains]);
+
+    
    
 }
+
 }
+
+

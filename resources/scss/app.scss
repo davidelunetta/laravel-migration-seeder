@@ -9,6 +9,6 @@ $fa-font-path: "../webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
-h1 {
-    color: $text-color;
+body {
+    background: linear-gradient(to left, #555555, #dddddd);   // color: $text-color;
 }
